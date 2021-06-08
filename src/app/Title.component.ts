@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     `
       h1 {
         font-family: Lato;
-        display: inline;
+        text-align: center;
       }
     `
   ]
