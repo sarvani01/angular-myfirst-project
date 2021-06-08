@@ -8,7 +8,7 @@ import { TitleComponent } from './Title.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, TitleComponent],
+  declarations: [AppComponent, HelloComponent, TitleComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

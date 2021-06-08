@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'title',
+  selector: 'app-title',
   template: `
     <h1>Animals and Birds</h1>
   `,
   styles: [
     `
-      title {
-        display: inline;
-      }
       h1 {
         font-family: Lato;
         display: inline;
