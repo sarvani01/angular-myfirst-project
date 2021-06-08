@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   `,
   styles: [
     `
+      title {
+        display: inline;
+      }
       h1 {
         font-family: Lato;
         display: inline;
