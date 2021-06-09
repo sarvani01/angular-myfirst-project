@@ -1,8 +1,14 @@
 <select name="Animals" id="animals">
   <option>..</option>
-  <option value="{{a.name}}" *ngFor="let a of animals">{{a.name}}</option>
-  </select>
+  <option value="{{a.name}}" *ngFor="let a of animals" >{{a.name}}</option>
+   </select>
 <select name="Birds" id="birds">
   <option>..</option>
   <option value="{{b.name}}" *ngFor="let b of birds">{{b.name}}</option>
 </select>
+
+<div *ngIf="onSelectAnimal()">
+<div class="card" *ngFor="let a of animals"[(ngModel)]="path">
+  <img  src="{{a.imagePath}}"  alt="Avatar" style="width:100%">
+</div>
+</div>
