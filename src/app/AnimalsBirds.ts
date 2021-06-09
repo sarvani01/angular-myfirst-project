@@ -1,4 +1,4 @@
-export class AnimasBirds {
+export class AnimalsBirds {
   animals = [
     {
       name: 'Lion',

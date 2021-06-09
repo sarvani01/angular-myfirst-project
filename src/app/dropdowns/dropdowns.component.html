@@ -1,14 +1,8 @@
 <select name="Animals" id="animals">
   <option>..</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
+  <option value="{{a.name}}" *ngFor="let a of animals">{{a.name}}</option>
+  </select>
 <select name="Birds" id="birds">
   <option>..</option>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
+  <option value="{{b.name}}" *ngFor="let b of birds">{{b.name}}</option>
 </select>
