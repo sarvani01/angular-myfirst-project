@@ -1,4 +1,4 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { AnimalsBirds } from '../AnimalsBirds';
 
 @Component({
@@ -10,15 +10,26 @@ export class DropdownsComponent implements OnInit {
   animalsBirds: AnimalsBirds = new AnimalsBirds();
   animals = [];
   birds = [];
-  path:string ='';
- @Output() animalLink = new EventEmitter<string>();
+  animalVal: string = '';
+  birdVal: string = '';
+  path: string = '';
+  value: string = '';
+ 
   constructor() {}
 
   ngOnInit() {
     this.animals = this.animalsBirds.animals;
     this.birds = this.animalsBirds.birds;
   }
-  onSelectAnimal(){
-    this.animalLink.emit(this.path);
+  animalChanged(animal) {
+    console.log(this.animalVal);
+    console.log(animal);
   }
+
+  birdChanged(bird) {
+    console.log(this.birdVal);
+    console.log(bird);
+  }
+
+ 
 }
