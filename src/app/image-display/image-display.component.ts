@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-image-display',
@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-display.component.css']
 })
 export class ImageDisplayComponent implements OnInit {
-
-  constructor() { }
+  @Input('animalBird') animalBird: any;
+  constructor() {}
 
   ngOnInit() {
+    console.log(this.animalBird);
   }
-
 }

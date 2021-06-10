@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { AnimalsBirds } from '../AnimalsBirds';
 
 @Component({
@@ -10,11 +10,11 @@ export class DropdownsComponent implements OnInit {
   animalsBirds: AnimalsBirds = new AnimalsBirds();
   animals = [];
   birds = [];
-  animalVal: string = '';
-  birdVal: string = '';
+  animalVal: any = '';
+  birdVal: any = '';
   path: string = '';
   value: string = '';
- 
+  @Output() passAnimalBird = new EventEmitter<any>();
   constructor() {}
 
   ngOnInit() {
@@ -24,12 +24,12 @@ export class DropdownsComponent implements OnInit {
   animalChanged(animal) {
     console.log(this.animalVal);
     console.log(animal);
+    this.passAnimalBird.emit(animal);
   }
 
   birdChanged(bird) {
     console.log(this.birdVal);
     console.log(bird);
+    this.passAnimalBird.emit(bird);
   }
-
- 
 }
