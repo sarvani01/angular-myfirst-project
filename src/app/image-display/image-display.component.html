@@ -1,6 +1,6 @@
 <div>
   <div class="card" *ngIf="animalBird">
-    <p>{{animalBird.name}}</p>
+    <p [innerText]="animalBird.name"></p>
     <img  src="{{animalBird.imagePath}}" alt="{{animalBird.name}}" style="width:100%">
   </div>
 </div>
