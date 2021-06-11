@@ -6,3 +6,5 @@
   <option value="">Please Select Bird</option>
   <option  *ngFor="let b of birds" [ngValue]="b">{{b.name}}</option>
 </select>
+
+<input type="button" value="Get Selected" (click)="dataOnClick()"/>

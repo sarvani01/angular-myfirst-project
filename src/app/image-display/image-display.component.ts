@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./image-display.component.css']
 })
 export class ImageDisplayComponent implements OnInit {
-  @Input('animalBird') animalBird: any;
+  //@Input('animalBird') animalBird: any;
+  @Input('animalBird') animalBird: any[];
+
   constructor() {}
 
   ngOnInit() {

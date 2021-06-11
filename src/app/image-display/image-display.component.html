@@ -1,6 +1,13 @@
-<div>
+<!--<div>
   <div class="card" *ngIf="animalBird">
     <p [innerText]="animalBird.name"></p>
     <img  src="{{animalBird.imagePath}}" alt="{{animalBird.name}}" style="width:50%">
+  </div>
+</div>-->
+
+<div>
+  <div class="card" *ngFor="let ab of animalBird;">
+    <p [innerText]="ab.name"></p>
+    <img  src="{{ab.imagePath}}" alt="{{ab.name}}" style="width:50%">
   </div>
 </div>
